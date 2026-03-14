@@ -170,7 +170,10 @@ function App() {
           })
 
           if (!response.ok) {
-            throw new Error('Form submission failed')
+            const text = await response.text()
+            console.error('Netlify form error status:', response.status)
+            console.error('Netlify form error body:', text)
+            throw new Error(`Form submission failed: ${response.status}`)
           }
 
           alert('✅ 상담 신청이 완료되었습니다!\n\n빠른 시일 내에 연락드리겠습니다.\n감사합니다!')
