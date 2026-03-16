@@ -1480,6 +1480,7 @@ function App() {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
+            netlify
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="subject" value="PIPER 119 신규 상담 신청" />
